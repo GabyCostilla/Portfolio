@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Portafolio de {{ user.name }}</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>{{ user.name }}</h1>
+        <img src="{{ user.profile_picture }}" alt="Foto de perfil de {{ user.name }}">
+        <p>{{ user.bio }}</p>
+    </header>
+
+    <!-- Educación -->
+    <section id="education">
+        <h2>Educación</h2>
+        <ul>
+            {% for edu in educations %}
+            <li><strong>{{ edu.degree }}</strong> en {{ edu.school_name }} ({{ edu.start_date }} - {{ edu.end_date }})</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experience">
+        <h2>Experiencia Laboral</h2>
+        <ul>
+            {% for exp in experiences %}
+            <li><strong>{{ exp.job_title }}</strong> en {{ exp.company }} ({{ exp.start_date }} - {{ exp.end_date }})</li>
+            <p>{{ exp.description }}</p>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            {% for skill in skills %}
+            <li>{{ skill.name }} - {{ skill.level }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Información de Contacto (opcional) -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
+    </section>
+</body>
+</html>
