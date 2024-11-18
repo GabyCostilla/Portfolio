@@ -1,54 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>Portafolio de {{ user.name }}</title>
+    <title>Portafolio de Gaby</title>
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <h1>{{ user.name }}</h1>
-        <img src="{{ user.profile_picture }}" alt="Foto de perfil de {{ user.name }}">
-        <p>{{ user.bio }}</p>
+    <header class="hero">
+        <div class="container">
+            <h1>Hola, soy Gaby. Encantado de conocerte !!</h1>
+            <p>Diseño y codifico cosas maravillosamente simples, y me encanta lo que hago.</p>
+        </div>
     </header>
 
-    <!-- Educación -->
-    <section id="education">
-        <h2>Educación</h2>
-        <ul>
-            {% for edu in educations %}
-            <li><strong>{{ edu.degree }}</strong> en {{ edu.school_name }} ({{ edu.start_date }} - {{ edu.end_date }})</li>
-            {% endfor %}
-        </ul>
+    <section class="features">
+        <div class="feature-card">
+            <div class="icon">💻</div>
+            <h2>Programador</h2>
+            <p>Soy programador con experiencia en diversos lenguajes y tecnologías.</p>
+            <h3>Lenguajes que manejo:</h3>
+            <p>C++, JavaScript, Python, C#</p>
+            <h3>Experiencia destacada:</h3>
+            <p>Desarrollo de videojuegos con Unity y Godot</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🎵</div>
+            <h2>Compositor y Productor Musical</h2>
+            <p>Trabajo en AGRM como compositor y productor musical, con habilidades en arreglos vocales, musicales, control de preproducción y postproducción.</p>
+            <h3>Herramientas que utilizo:</h3>
+            <p>FL Studio, LMMS</p>
+            <h3>Experiencia como:</h3>
+            <p>Beatmaker, productor musical</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🎮</div>
+            <h2>Desarrollo de Videojuegos</h2>
+            <p>He desarrollado videojuegos y aportado ideas creativas utilizando motores como Unity y Godot.</p>
+            <h3>Especialidades:</h3>
+            <p>Programación, diseño de mecánicas, integración de música y sonido</p>
+        </div>
     </section>
-
-    <!-- Experiencia -->
-    <section id="experience">
-        <h2>Experiencia Laboral</h2>
-        <ul>
-            {% for exp in experiences %}
-            <li><strong>{{ exp.job_title }}</strong> en {{ exp.company }} ({{ exp.start_date }} - {{ exp.end_date }})</li>
-            <p>{{ exp.description }}</p>
-            {% endfor %}
-        </ul>
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <p>Aquí tienes algunos de mis proyectos destacados:</p>
+            <div class="project-grid">
+                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/653331-crop178_0_1736_876-ll-5ec4vnfu-v4.webp');">
+                    <h3>Hold the Ball</h3>
+                    <p>Un desafiante juego donde debes mantener la pelota sobre una plataforma el mayor tiempo posible.</p>
+                    <a href="https://gamejolt.com/games/holdball/653331" target="_blank">Jugar ahora</a>
+                </div>
+                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/649544-crop178_0_1736_876-ll-eb9whhhb-v4.webp');">
+                    <h3>Unity Online</h3>
+                    <p>Juego multijugador donde el objetivo es robar la pelota y mantenerla para ganar.</p>
+                    <a href="https://gamejolt.com/games/unityexample/649544" target="_blank">Jugar ahora</a>
+                </div>
+                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/642337-crop0_0_1557_876-ll-zusjqmwm-v4.webp');">
+                    <h3>Dance Off</h3>
+                    <p>Un endless de ritmo donde deberás mantenerte en sincronía con la música.</p>
+                    <a href="https://gamejolt.com/games/danceoff/642337" target="_blank">Jugar ahora</a>
+                </div>
+                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/621481-vv9tgex9-v4.webp');">
+                    <h3>Minecraft en una semana</h3>
+                    <p>Un proyecto rápido en el que recreé una versión simple de Minecraft en solo 7 días.</p>
+                    <a href="https://gamejolt.com/games/minecraft-en-una-semana/621481" target="_blank">Ver proyecto</a>
+                </div>
+                <div class="project-card" style="background-image: url('https://www.recipesforwellbeing.org/wp-content/uploads/2021/02/031-Collaborative-painting_landscape-scaled.jpg');">
+                    <h3>Pintura Colaborativa</h3>
+                    <p>Una herramienta digital para pintar en colaboración con otra persona en tiempo real.</p>
+                    <a href="https://github.com/GabyCostilla/Pintura-Colaborativa" target="_blank">Ver en GitHub</a>
+                </div>
+                <div class="project-card" style="background-image: url('https://www.gamebound.io/userfiles/bea1244322ce05963ef03dd49efcdad6.png');">
+                    <h3>Mindustry</h3>
+                    <p>The automation tower defense RTS. Colaboré en el desarrollo de este proyecto industrial.</p>
+                    <a href="https://github.com/GabyCostilla/Mindustry" target="_blank">Ver en GitHub</a>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <!-- Habilidades -->
-    <section id="skills">
-        <h2>Habilidades</h2>
-        <ul>
-            {% for skill in skills %}
-            <li>{{ skill.name }} - {{ skill.level }}</li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    <!-- Información de Contacto (opcional) -->
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>Email: <a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
-    </section>
+    
 </body>
 </html>

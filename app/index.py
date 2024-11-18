@@ -2,12 +2,12 @@ from flask import render_template
 from . import db
 from .models import User, Education, Experience, Skill
 
-from flask import current_app as app  # Usar current_app en lugar de importar app directamente
+from flask import current_app as app  
 
 @app.route('/')
 def index():
-    user = User.query.first()  # Obtiene los datos del usuario
-    educations = Education.query.filter_by(user_id=user.id).all()
-    experiences = Experience.query.filter_by(user_id=user.id).all()
-    skills = Skill.query.filter_by(user_id=user.id).all()
-    return render_template('index.html', user=user, educations=educations, experiences=experiences, skills=skills)
+    user = {
+        "name": "Gaby Costilla",
+        "bio": "Hola soy Gaby aunque me conocen como Gabdiz, gabygamer2hello,gabnzana en compota, soy programador en c++,js,pytoh,c#. Hize videojuegos en unity y godot y actualmente trabajo en la AGRM, siendo compositor y productor"
+    }
+    return render_template('index.html', user=user)
