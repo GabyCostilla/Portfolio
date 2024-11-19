@@ -145,3 +145,48 @@ body {
     background-color: #7b4eff;
     color: #fff;
 }
+
+.companies {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9; /* Fondo claro para destacar la sección */
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.companies-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espaciado entre los logos */
+    flex-wrap: wrap; /* Permite que los logos se acomoden en filas si no hay espacio suficiente */
+}
+
+.company-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.company-card img {
+    width: 100px; /* Tamaño del logo */
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); /* Sombra para destacar */
+    border-radius: 8px; /* Bordes redondeados para darle un toque moderno */
+}
+
+.company-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+.company-card:hover {
+    transform: scale(1.1); /* Zoom al pasar el ratón */
+}
