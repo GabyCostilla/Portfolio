@@ -121,6 +121,27 @@ h1 {
     }
 }
 
+.projects {
+    background: linear-gradient(120deg, #f3f4f7, #eef1f6);
+    animation: gradientBG 10s infinite alternate;
+}
+
+@keyframes gradientBG {
+    0% {
+        background: linear-gradient(120deg, #f3f4f7, #eef1f6);
+    }
+    100% {
+        background: linear-gradient(120deg, #eef1f6, #d8e4f0);
+    }
+}
+
+.project-card {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .project-card {
     position: relative;
     border-radius: 8px;
@@ -178,9 +199,20 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
 .project-card a:hover {
     background-color: #7b4eff;
     color: #fff;
+    
 }
 
 .companies {
