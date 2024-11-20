@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+
     <title>Portafolio de Gaby</title>
 </head>
+
 <body>
-    <header class="hero">
+    <header class="hero" data-aos="zoom-in">
         <div class="container">
             <h1>Hola, soy Gaby. Encantado de conocerte !!</h1>
             <p>Diseño y codifico cosas maravillosamente simples, y me encanta lo que hago.</p>
         </div>
     </header>
-
+    
     <section class="features">
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-right">
             <div class="icon">💻</div>
             <h2>Programador</h2>
             <p>Soy programador con experiencia en diversos lenguajes y tecnologías.</p>
@@ -24,7 +27,7 @@
             <h3>Experiencia destacada:</h3>
             <p>Desarrollo de videojuegos con Unity y Godot</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-left">
             <div class="icon">🎵</div>
             <h2>Compositor y Productor Musical</h2>
             <p>Trabajo en AGRM como compositor y productor musical, con habilidades en arreglos vocales, musicales, control de preproducción y postproducción.</p>
@@ -33,7 +36,7 @@
             <h3>Experiencia como:</h3>
             <p>Beatmaker, productor musical</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card" data-aos="fade-up">
             <div class="icon">🎮</div>
             <h2>Desarrollo de Videojuegos</h2>
             <p>He desarrollado videojuegos y aportado ideas creativas utilizando motores como Unity y Godot.</p>
@@ -41,37 +44,47 @@
             <p>Programación, diseño de mecánicas, integración de música y sonido</p>
         </div>
     </section>
-    <section class="projects">
+    
+    <section class="projects" data-aos="fade-up">
         <div class="container">
-            <h2 class="section-title">Mis Proyectos</h2>
-            <p>A continuación se muestran algunos proyectos de diseño en los que he trabajado anteriormente. ¿Quieres ver más? <a href="mailto:gabrielckeret@gmail.com">Envíame un correo electrónico.</a></p>
+            <h2 class="section-title" data-aos="zoom-in" data-aos-delay="100">Mis Proyectos</h2>
+            <p data-aos="fade-in" data-aos-delay="200">
+                A continuación se muestran algunos proyectos de diseño en los que he trabajado anteriormente. 
+                ¿Quieres ver más? <a href="mailto:gabrielckeret@gmail.com">Envíame un correo electrónico.</a>
+            </p>
             <div class="project-grid">
-                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/653331-crop178_0_1736_876-ll-5ec4vnfu-v4.webp');">
+                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/653331-crop178_0_1736_876-ll-5ec4vnfu-v4.webp');" 
+                    data-aos="fade-up" data-aos-delay="300">
                     <h3>Hold the Ball</h3>
                     <p>Un desafiante juego donde debes mantener la pelota sobre una plataforma el mayor tiempo posible.</p>
                     <a href="https://gamejolt.com/games/holdball/653331" target="_blank">Jugar ahora</a>
                 </div>
-                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/649544-crop178_0_1736_876-ll-eb9whhhb-v4.webp');">
+                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/649544-crop178_0_1736_876-ll-eb9whhhb-v4.webp');" 
+                    data-aos="fade-up" data-aos-delay="400">
                     <h3>Unity Online</h3>
                     <p>Juego multijugador donde el objetivo es robar la pelota y mantenerla para ganar.</p>
                     <a href="https://gamejolt.com/games/unityexample/649544" target="_blank">Jugar ahora</a>
                 </div>
-                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/642337-crop0_0_1557_876-ll-zusjqmwm-v4.webp');">
+                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/642337-crop0_0_1557_876-ll-zusjqmwm-v4.webp');" 
+                    data-aos="fade-up" data-aos-delay="500">
                     <h3>Dance Off</h3>
                     <p>Un endless de ritmo donde deberás mantenerte en sincronía con la música.</p>
                     <a href="https://gamejolt.com/games/danceoff/642337" target="_blank">Jugar ahora</a>
                 </div>
-                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/621481-vv9tgex9-v4.webp');">
+                <div class="project-card" style="background-image: url('https://m.gjcdn.net/game-thumbnail/500/621481-vv9tgex9-v4.webp');" 
+                    data-aos="fade-up" data-aos-delay="600">
                     <h3>Minecraft en una semana</h3>
                     <p>Un proyecto rápido en el que recreé una versión simple de Minecraft en solo 7 días.</p>
                     <a href="https://gamejolt.com/games/minecraft-en-una-semana/621481" target="_blank">Ver proyecto</a>
                 </div>
-                <div class="project-card" style="background-image: url('https://www.recipesforwellbeing.org/wp-content/uploads/2021/02/031-Collaborative-painting_landscape-scaled.jpg');">
+                <div class="project-card" style="background-image: url('https://www.recipesforwellbeing.org/wp-content/uploads/2021/02/031-Collaborative-painting_landscape-scaled.jpg');" 
+                    data-aos="fade-up" data-aos-delay="700">
                     <h3>Pintura Colaborativa</h3>
                     <p>Una herramienta digital para pintar en colaboración con otra persona en tiempo real.</p>
                     <a href="https://github.com/GabyCostilla/Pintura-Colaborativa" target="_blank">Ver en GitHub</a>
                 </div>
-                <div class="project-card" style="background-image: url('https://www.gamebound.io/userfiles/bea1244322ce05963ef03dd49efcdad6.png');">
+                <div class="project-card" style="background-image: url('https://www.gamebound.io/userfiles/bea1244322ce05963ef03dd49efcdad6.png');" 
+                    data-aos="fade-up" data-aos-delay="800">
                     <h3>Mindustry</h3>
                     <p>The automation tower defense RTS. Colaboré en el desarrollo de este proyecto industrial.</p>
                     <a href="https://github.com/GabyCostilla/Mindustry" target="_blank">Ver en GitHub</a>
@@ -79,7 +92,9 @@
             </div>
         </div>
     </section>
-    <section class="companies">
+    
+
+    <section class="companies" data-aos="fade-up">
         <div class="container">
             <h2 class="section-title">Empresas con las que he trabajado</h2>
             <div class="companies-grid">
@@ -98,6 +113,218 @@
             </div>
         </div>
     </section>
+    <section class="technologies" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Tecnologías que utilizo</h2>
+            <p class="section-description">Aquí están algunas de las tecnologías que utilizo regularmente en mis proyectos.</p>
+            <div class="technologies-grid">
+                <!-- Cada tarjeta tecnológica -->
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+                    <p><a href="https://www.python.org" target="_blank">Python</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/1200px-Bash_Logo_Colored.svg.png" alt="Bash Logo">
+                    <p><a href="https://www.gnu.org/software/bash/" target="_blank">Bash</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js Logo">
+                    <p><a href="https://nodejs.org" target="_blank">Node.js</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://w7.pngwing.com/pngs/414/62/png-transparent-blender-hd-logo-thumbnail.png" alt="Blender Logo">
+                    <p><a href="https://www.blender.org" target="_blank">Blender</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux Logo">
+                    <p><a href="https://www.kernel.org" target="_blank">Linux</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++ Logo">
+                    <p><a href="https://isocpp.org" target="_blank">C++</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C# Logo">
+                    <p><a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">C#</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/unity-69.svg" alt="Unity Logo">
+                    <p><a href="https://unity.com" target="_blank">Unity</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot Logo">
+                    <p><a href="https://godotengine.org" target="_blank">Godot</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg" alt="Arduino Logo">
+                    <p><a href="https://www.arduino.cc" target="_blank">Arduino</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git Logo">
+                    <p><a href="https://git-scm.com" target="_blank">Git</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS Logo">
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" alt="HTML Logo">
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDB Logo">
+                    <p><a href="https://www.mongodb.com" target="_blank">MongoDB</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL Logo">
+                    <p><a href="https://www.mysql.com" target="_blank">MySQL</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo">
+                    <p><a href="https://reactjs.org" target="_blank">React</a></p>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/postman.svg" alt="Postman Logo">
+                    <p><a href="https://www.postman.com" target="_blank">Postman</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline" data-aos="fade-up">
+        <h2>Mis Cursos</h2>
+        <div class="timeline-container">
+
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon school">
+                    🎓
+                </div>
+                <div class="timeline-content">
+                    <h3>Instituto Técnico Renault</h3>
+                    <span>2019 - 2025</span>
+                    <p>Graduado con especialidad en Programación. Durante estos años desarrollé una sólida base en lógica de programación, algoritmos y desarrollo de software.</p>
+                </div>
+            </div>
     
+
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-icon webdev">
+                    🌐
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso de HTML y CSS</h3>
+                    <span>2020</span>
+                    <p>Aprendí a crear sitios web responsivos y modernos con HTML5 y CSS3, enfocándome en diseño y accesibilidad.</p>
+                </div>
+            </div>
+    
+
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon game">
+                    🎮
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso de Desarrollo de Videojuegos con Unity</h3>
+                    <span>2020</span>
+                    <p>Estudié la creación de videojuegos en 2D y 3D utilizando Unity, trabajando en física, animaciones y scripting en C#.</p>
+                </div>
+            </div>
+    
+
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-icon game">
+                    🎲
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso de Desarrollo de Videojuegos con Godot</h3>
+                    <span>2021</span>
+                    <p>Profundicé en el desarrollo de videojuegos con Godot, diseñando sistemas interactivos y explorando el lenguaje GDScript.</p>
+                </div>
+            </div>
+    
+
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon design">
+                    🖌️
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso de Modelado 3D con Blender</h3>
+                    <span>2020</span>
+                    <p>Me especialicé en modelado 3D, texturizado y creación de animaciones usando Blender para proyectos creativos y videojuegos.</p>
+                </div>
+            </div>
+    
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-icon music">
+                    🎵
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso de Producción Musical con FL Studio</h3>
+                    <span>2021</span>
+                    <p>Exploré el mundo de la música digital, aprendiendo a crear composiciones, mezclar y masterizar utilizando FL Studio.</p>
+                </div>
+            </div>
+    
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon music">
+                    🎧
+                </div>
+                <div class="timeline-content">
+                    <h3>Curso Avanzado de Producción Musical</h3>
+                    <span>2022-2023</span>
+                    <p>Profundicé en la creación de bandas sonoras para videojuegos y multimedia, combinando diseño sonoro y música experimental.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <footer class="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="https://i.pinimg.com/1200x/8e/60/39/8e6039a4c9cb6553c2bfcdb042ce8f21.jpg" alt="Logo personal">
+            </div>
+            <p class="footer-description">Vivir, aprender y subir de nivel un día a la vez.</p>
+            <div class="social-links">
+                <a href="https://x.com/GABYGAMER2HELL1" target="_blank" class="social-button">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-x-9581782-7740647.png?f=webp" alt="Twitter">
+                </a>
+                <a href="https://github.com/GabyCostilla" target="_blank" class="social-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/gabriel-agustin-costilla-35663b26b/" target="_blank" class="social-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/gabnzana_en_compota" target="_blank" class="social-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="mailto:gabrielckeret@gmail.com" class="social-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
+                </a>
+                <a href="https://www.youtube.com/channel/UCeCIO8kNvASP2-27TVscnYQ" target="_blank" class="social-button">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+                </a>
+            </div>
+            <p class="footer-credits">
+                Hecho a mano por mí © Gabriel Agustin Costilla<br> 
+                Creado con ❤️ y puro código.
+                ©Gatos Tontos y Asociados
+            </p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
 </body>
 </html>

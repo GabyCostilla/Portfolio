@@ -7,6 +7,43 @@ body {
     line-height: 1.6;
 }
 
+/* Estilos para la sección introductoria */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #333;
+}
+
+.intro-content {
+    max-width: 600px;
+}
+
+.intro-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #6a0dad; /* Color púrpura */
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #6a0dad; /* Tono púrpura */
+    margin-bottom: 1rem;
+}
+
+.intro-description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
 .hero {
     background-color: #7b4eff;
     color: white;
@@ -189,4 +226,208 @@ body {
 
 .company-card:hover {
     transform: scale(1.1); /* Zoom al pasar el ratón */
+}
+
+.technologies {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9; /* Fondo claro */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.section-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste automático */
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.tech-card {
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.tech-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.tech-card p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #555;
+}
+
+.tech-card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.tech-card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    background-color: #6a0dad; /* Fondo púrpura */
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.footer-description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-button img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+}
+
+.social-button img:hover {
+    transform: scale(1.1); /* Efecto zoom al pasar el mouse */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Resaltado */
+}
+
+.footer-credits {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Estilo principal */
+.timeline {
+    padding: 50px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.timeline h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Contenedor */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Eventos */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto al pasar el cursor */
+.timeline-item:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Íconos */
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 50%;
+}
+
+/* Temas dinámicos */
+.timeline-icon.school {
+    background-color: #6c63ff; /* Azul */
+}
+
+.timeline-icon.webdev {
+    background-color: #00a8cc; /* Turquesa */
+}
+
+.timeline-icon.game {
+    background-color: #ff595e; /* Rojo */
+}
+
+.timeline-icon.design {
+    background-color: #ffca3a; /* Amarillo */
+}
+
+.timeline-icon.music {
+    background-color: #8ac926; /* Verde */
+}
+
+/* Contenido */
+.timeline-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+.timeline-content span {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Animaciones generales */
+[data-aos] {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-50px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(50px);
 }
