@@ -11,3 +11,6 @@ def index():
         "bio": "Hola soy Gaby aunque me conocen como Gabdiz, gabygamer2hello,gabnzana en compota, soy programador en c++,js,pytoh,c#. Hize videojuegos en unity y godot y actualmente trabajo en la AGRM, siendo compositor y productor"
     }
     return render_template('index.html', user=user)
+
+
+#no hay POO ni herencia ;( 
